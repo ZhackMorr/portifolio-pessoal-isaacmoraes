@@ -1,0 +1,20 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Editores
+.vscode/
+.idea/
+
+# Dependências e builds (para a implementação futura)
+node_modules/
+dist/
+build/
+.cache/
+
+# Variáveis de ambiente
+.env
+.env.*
+
+# Logs
+*.log

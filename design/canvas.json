@@ -1,0 +1,17 @@
+{
+  "v": 3,
+  "createdOnFiles": { "v": 1, "at": "2026-10-19T19:25:00Z" },
+  "title": "Portfólio BI",
+  "launch": { "view": "canvas" },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": { "x": 0, "y": 0, "w": 1440, "h": 4500, "title": "Desktop — Home", "expand": "fill", "is_interactive": true },
+    "Mobile.dc.html": { "x": 1520, "y": 0, "w": 390, "h": 7300, "title": "Mobile — Home", "radius": 28 },
+    "Direcao.dc.html": { "x": 1990, "y": 0, "w": 1280, "h": 960, "title": "Direção visual" }
+  },
+  "order": ["Main.dc.html", "Mobile.dc.html", "Direcao.dc.html"],
+  "notes": {
+    "t1": { "x": 0, "y": -260, "text": "Portfólio de BI — protótipo visual", "kind": "title1", "maxW": 3270 }
+  },
+  "designSystems": []
+}

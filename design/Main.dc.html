@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Portfólio de BI — Home</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:#0A0E1A;scroll-behavior:smooth}
+section[id]{scroll-margin-top:24px}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,168,0,.55)}70%{box-shadow:0 0 0 10px rgba(255,168,0,0)}100%{box-shadow:0 0 0 0 rgba(255,168,0,0)}}
+.dot{animation:pulse 2s ease-out infinite}
+*{box-sizing:border-box}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit}
+@keyframes rise{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+@keyframes maskUp{from{transform:translateY(105%)}to{transform:none}}
+@keyframes drift1{0%{transform:translate3d(-4%,2%,0) scale(1)}100%{transform:translate3d(8%,-6%,0) scale(1.12)}}
+@keyframes drift2{0%{transform:translate3d(6%,0,0) scale(1.05)}100%{transform:translate3d(-8%,8%,0) scale(.95)}}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes cue{0%{transform:translateY(0);opacity:0}30%{opacity:1}100%{transform:translateY(36px);opacity:0}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes draw{from{stroke-dashoffset:600}to{stroke-dashoffset:0}}
+.mask{display:block;overflow:hidden;padding-bottom:.08em}
+.mask > span{display:block;animation:maskUp 1.1s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d,0s)}
+.rv{animation:rise .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:var(--d,0s)}
+.blob1{animation:drift1 16s ease-in-out infinite alternate}
+.blob2{animation:drift2 20s ease-in-out infinite alternate}
+.glass{animation:floaty 7s ease-in-out infinite}
+.cue{animation:cue 2.4s ease-in-out infinite}
+.bar{transform-origin:bottom;animation:grow 1s cubic-bezier(.2,.8,.2,1) both;transition:height .8s cubic-bezier(.2,.8,.2,1)}
+.line{stroke-dasharray:600;animation:draw 2s ease-out both}
+.nav a{opacity:.7;transition:opacity .25s}
+.nav a:hover{opacity:1;color:var(--accent)}
+.card{transition:transform .5s cubic-bezier(.2,.8,.2,1),border-color .3s,background .3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,168,0,.45)}
+.plist{transition:background .3s,border-color .3s,transform .3s}
+.plist:hover{background:rgba(255,255,255,.05);transform:translateX(6px)}
+.imgbtn{position:relative;display:block;width:100%;padding:0;overflow:hidden;border-radius:20px;border:1px solid rgba(255,255,255,.12);background:#05070F;cursor:zoom-in;transition:border-color .3s,transform .5s cubic-bezier(.2,.8,.2,1)}
+.imgbtn img{transition:transform .9s cubic-bezier(.2,.8,.2,1)}
+.imgbtn:hover{border-color:rgba(255,168,0,.5)}
+.imgbtn:hover img{transform:scale(1.04)}
+@keyframes segIn{from{transform:scaleX(0);opacity:0}to{transform:scaleX(1);opacity:1}}
+.seg{transform-origin:left}
+.cta{transition:transform .3s,box-shadow .3s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(255,168,0,.35)}
+@supports (animation-timeline: view()){
+  .sr{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 45%}
+  .seg{animation:segIn linear both;animation-timeline:view();animation-range:entry 20% entry 80%}
+}
+@media (max-width:860px){
+  .glass{display:none}
+  .navlinks{display:none !important}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none !important;transition:none !important}
+}
+</style>
+</helmet>
+
+<div style="--accent: {{accent}}; --accent2: {{accent2}}; min-height: 100vh; background: #0A0E1A; color: #F4F6FB; font-family: Manrope, system-ui, sans-serif">
+<div style="max-width: 1360px; margin: 0 auto; padding: 24px clamp(16px, 3vw, 40px) 0">
+
+<!-- HERO -->
+<section style="position: relative; overflow: hidden; border-radius: 32px; background: #05070F; min-height: clamp(640px, 90vh, 840px); display: flex; flex-direction: column; justify-content: space-between; padding: clamp(24px, 4vw, 56px); box-shadow: 0 50px 120px rgba(0,0,0,.55)">
+  <div aria-hidden="true" class="blob1" style="position: absolute; left: -12%; bottom: -22%; width: 78%; height: 78%; border-radius: 50%; background: radial-gradient(closest-side, #2D6AD8 0%, rgba(31,78,158,.65) 45%, transparent 75%); filter: blur(46px)"></div>
+  <div aria-hidden="true" class="blob2" style="position: absolute; right: -10%; top: -6%; width: 60%; height: 70%; border-radius: 50%; background: radial-gradient(closest-side, #1A3A82 0%, rgba(20,44,100,.55) 50%, transparent 80%); filter: blur(60px)"></div>
+  <div aria-hidden="true" style="position: absolute; left: -4%; bottom: -10%; width: 30%; height: 30%; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,255,224,.28), transparent 75%); filter: blur(50px)"></div>
+  <div aria-hidden="true" style="position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px); background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse at 40% 60%, #000 0%, transparent 70%); mask-image: radial-gradient(ellipse at 40% 60%, #000 0%, transparent 70%)"></div>
+  <svg aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: .32; mix-blend-mode: overlay; pointer-events: none"><filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+
+  <header class="rv" style="position: relative; display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase">
+    <a href="#topo">Isaac Moraes</a>
+    <nav class="nav navlinks" style="display: flex; gap: clamp(24px, 5vw, 80px)">
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#processo">Processo</a>
+      <a href="#playbook">Playbook</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <div id="topo" style="position: relative; padding: 48px 0">
+    <h1 style="margin: 0; font-weight: 500; font-size: clamp(56px, 10.5vw, 168px); line-height: .94; letter-spacing: -.045em">
+      <span class="mask"><span style="--d:.15s">Analista</span></span>
+      <span class="mask" style="display: flex; align-items: flex-end; flex-wrap: wrap; gap: 0 .18em">
+        <span style="--d:.3s">de BI</span>
+        <span style="--d:.6s; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500; letter-spacing: -.02em; color: var(--accent); font-size: .78em; line-height: 1; transform: translateY(-.1em)">insights</span>
+      </span>
+    </h1>
+    <p class="rv" style="--d:.9s; max-width: 640px; margin: 28px 0 0; font-size: clamp(15px, 1.3vw, 18px); line-height: 1.6; color: #B7C3DE">Transformo dados em indicadores e dashboards que ajudam a compreender cenários, identificar oportunidades e apoiar decisões de negócio.</p>
+  </div>
+
+  <div class="glass" aria-hidden="true" style="position: absolute; right: clamp(24px, 5vw, 72px); bottom: clamp(110px, 16vh, 170px); width: 270px; padding: 18px 20px; border-radius: 22px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px)">
+    <div style="display: flex; justify-content: space-between; align-items: center; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: #B7C3DE"><span>Receita</span><span style="color: var(--accent2)">▲ tendência</span></div>
+    <div style="height: 10px; width: 90px; margin-top: 12px; border-radius: 6px; background: rgba(255,255,255,.35)"></div>
+    <svg viewBox="0 0 230 70" style="width: 100%; height: 70px; margin-top: 10px"><path class="line" d="M0 58 C20 52 30 40 50 44 S85 20 110 26 S150 46 172 24 S210 8 230 6" fill="none" stroke="#00FFE0" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </div>
+
+  <div style="position: relative; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px">
+    <div class="rv" style="--d:1.1s; display: flex; gap: clamp(24px, 6vw, 96px); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; line-height: 1.7">
+      <div><div style="font-weight: 800">Power BI · DAX · Power Query</div><div style="color: #9DB0D3">People Analytics<br>Dashboards e indicadores</div></div>
+      <div><div style="font-weight: 800">Baseado em</div><div style="color: #9DB0D3">Diadema, SP<br>Disponível para projetos</div></div>
+    </div>
+    <div aria-hidden="true" style="position: relative; width: 1px; height: 64px; background: rgba(255,255,255,.35); overflow: hidden"><div class="cue" style="position: absolute; left: 0; top: 0; width: 1px; height: 24px; background: var(--accent)"></div></div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" style="padding: clamp(72px, 10vw, 140px) 0 0">
+  <div class="sr" style="display: flex; flex-wrap: wrap; gap: 40px clamp(32px, 6vw, 96px); align-items: flex-start">
+    <div style="flex: 1 1 300px">
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #6F86B4">Sobre</div>
+      <h2 style="margin: 12px 0 0; font-weight: 500; font-size: clamp(36px, 5.4vw, 80px); line-height: 1; letter-spacing: -.04em">Prazer, <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: var(--accent)">Isaac</span></h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px">
+        <span style="padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(255,168,0,.5); color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .04em">+3 anos em People Analytics e BI</span>
+        <span style="padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,.16); font-size: 12px; font-weight: 600; letter-spacing: .04em">Análise e Desenvolvimento de Sistemas</span>
+        <span style="padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,.16); font-size: 12px; font-weight: 600; letter-spacing: .04em">Pós-graduando em Ciência de Dados e Big Data</span>
+        <span style="padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,.16); font-size: 12px; font-weight: 600; letter-spacing: .04em">Power BI</span>
+      </div>
+    </div>
+    <div style="flex: 1.7 1 420px; max-width: 760px">
+      <p style="margin: 0; font-size: clamp(20px, 2vw, 28px); line-height: 1.4; letter-spacing: -.02em; font-weight: 500">Sou analista de BI, com formação em Análise e Desenvolvimento de Sistemas e atualmente cursando pós-graduação em Ciência de Dados e Big Data.</p>
+      <p style="margin: 24px 0 0; font-size: 16px; line-height: 1.75; color: #B7C3DE">Trabalho com transformação e modelagem de dados, construção de indicadores e desenvolvimento de dashboards no Power BI, conectando informações a necessidades reais do negócio.</p>
+      <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: #B7C3DE">Minha experiência envolve análises de indicadores de RH, acompanhamento de movimentações de pessoal, demanda por vagas e pesquisas de experiência do colaborador.</p>
+      <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.75; color: #B7C3DE">Busco desenvolver soluções analíticas que combinem consistência dos dados, clareza visual e utilidade para a tomada de decisão, enquanto amplio meus conhecimentos em análise de dados e automação de processos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos" style="padding: clamp(72px, 10vw, 140px) 0 0">
+  <div class="sr" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; margin-bottom: 40px">
+    <div>
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #6F86B4">Projetos em destaque</div>
+      <h2 style="margin: 12px 0 0; font-weight: 500; font-size: clamp(36px, 5.4vw, 80px); line-height: 1; letter-spacing: -.04em">Dados com <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: var(--accent)">propósito</span></h2>
+    </div>
+    <p style="max-width: 360px; margin: 0; font-size: 15px; line-height: 1.6; color: #9DB0D3">Selecione um case para ver o contexto, a solução e o impacto.</p>
+  </div>
+
+  <div class="sr" style="display: flex; flex-wrap: wrap; gap: 20px">
+    <div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 10px">
+      <sc-for list="{{projects}}" as="p" hint-placeholder-count="4">
+        <button class="plist" onClick="{{p.pick}}" style="{{p.style}}">
+          <span style="font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .1em">{{p.n}}</span>
+          <span style="flex: 1; text-align: left"><span style="display: block; font-size: 19px; font-weight: 600; letter-spacing: -.02em">{{p.title}}</span><span style="display: block; margin-top: 4px; font-size: 12px; color: #8FA0C2; letter-spacing: .06em; text-transform: uppercase">{{p.tag}}</span></span>
+          <sc-if value="{{p.soon}}" hint-placeholder-val="{{ false }}">
+            <span style="flex: none; padding: 5px 11px; border-radius: 999px; border: 1px solid rgba(255,168,0,.5); color: var(--accent); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase">Em breve</span>
+          </sc-if>
+          <span aria-hidden="true" style="font-size: 18px; color: var(--accent2)">→</span>
+        </button>
+      </sc-for>
+    </div>
+
+    <div style="flex: 999 1 520px; min-width: 0; border-radius: 28px; background: #10162A; border: 1px solid rgba(255,255,255,.08); padding: clamp(18px, 2.4vw, 32px); display: flex; flex-direction: column; gap: 22px">
+      <div style="display: flex; justify-content: space-between; align-items: center">
+        <div aria-hidden="true" style="display: flex; gap: 7px"><i style="width: 10px; height: 10px; border-radius: 50%; background: #FF5F57"></i><i style="width: 10px; height: 10px; border-radius: 50%; background: #FEBC2E"></i><i style="width: 10px; height: 10px; border-radius: 50%; background: #28C840"></i></div>
+        <div style="font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: #8FA0C2">{{active.tag}}</div>
+      </div>
+      <sc-if value="{{isP1}}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; align-items: center; gap: 12px; padding: 11px 16px; border-radius: 14px; background: rgba(255,168,0,.1); border: 1px solid rgba(255,168,0,.3); font-size: 13px; line-height: 1.45; color: #FFD38A">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: 0 0 auto"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4 M12 8h.01"/></svg>
+        <span><strong style="font-weight: 700">Dados fictícios.</strong> Todos os valores exibidos neste projeto foram alterados e não representam números reais.</span>
+      </div>
+      </sc-if>
+      <sc-if value="{{notP1}}" hint-placeholder-val="{{ false }}">
+      <div style="position: relative; overflow: hidden; min-height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 48px 24px; border-radius: 20px; background: #05070F; border: 1px dashed rgba(255,255,255,.2); text-align: center">
+        <div aria-hidden="true" class="blob1" style="position: absolute; left: 15%; bottom: -40%; width: 70%; height: 100%; border-radius: 50%; background: radial-gradient(closest-side, rgba(45,106,216,.6), transparent 75%); filter: blur(46px)"></div>
+        <div aria-hidden="true" class="blob2" style="position: absolute; right: 5%; top: -30%; width: 40%; height: 70%; border-radius: 50%; background: radial-gradient(closest-side, rgba(0,255,224,.2), transparent 75%); filter: blur(46px)"></div>
+        <span style="position: relative; display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.05); font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase"><i class="dot" aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent)"></i>{{active.tag}}</span>
+        <div style="position: relative; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500; font-size: clamp(56px, 7vw, 104px); line-height: 1; letter-spacing: -.02em; color: var(--accent)">Em breve</div>
+      </div>
+      </sc-if>
+      <sc-if value="{{isP1}}" hint-placeholder-val="{{ true }}">
+      <div style="display: flex; flex-wrap: wrap; gap: 14px">
+        <figure style="margin: 0; flex: 1 1 100%; min-width: 0">
+          <button class="imgbtn" onClick="{{open0}}" aria-label="Ampliar imagem: RH – Headcount Efetivos">
+            <img src="/_blob/172fd3d5f834a771ea02b672f6645431" alt="Dashboard RH – Headcount Efetivos, com headcount, admissões, demissões e turnover" style="display: block; width: 100%; aspect-ratio: 2 / 1; object-fit: cover">
+            <span style="position: absolute; top: 12px; left: 12px; padding: 5px 10px; border-radius: 999px; background: rgba(5,7,15,.78); border: 1px solid rgba(255,168,0,.5); color: #FFA800; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px)">Dados fictícios</span>
+          </button>
+          <figcaption style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #8FA0C2"><span>RH – Headcount Efetivos</span><span style="color: var(--accent)">Ampliar +</span></figcaption>
+        </figure>
+        <figure style="margin: 0; flex: 1 1 280px; min-width: 0">
+          <button class="imgbtn" onClick="{{open1}}" aria-label="Ampliar imagem: RH – Treinamentos Onboarding">
+            <img src="/_blob/ce7cb8d9a3adce8d0726dcb3f154777f" alt="Dashboard RH – Treinamentos Onboarding, com a conclusão dos treinamentos por unidade" style="display: block; width: 100%; aspect-ratio: 2 / 1; object-fit: cover">
+            <span style="position: absolute; top: 12px; left: 12px; padding: 5px 10px; border-radius: 999px; background: rgba(5,7,15,.78); border: 1px solid rgba(255,168,0,.5); color: #FFA800; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px)">Dados fictícios</span>
+          </button>
+          <figcaption style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #8FA0C2"><span>RH – Treinamentos Onboarding</span><span style="color: var(--accent)">Ampliar +</span></figcaption>
+        </figure>
+        <figure style="margin: 0; flex: 1 1 280px; min-width: 0">
+          <button class="imgbtn" onClick="{{open2}}" aria-label="Ampliar imagem: RH – Vagas Trabalhadas">
+            <img src="/_blob/41d1e1c81303856394eebde8d7a4d702" alt="Dashboard RH – Vagas Trabalhadas, com vagas criadas, fechadas, em aberto e SLA" style="display: block; width: 100%; aspect-ratio: 2 / 1; object-fit: cover">
+            <span style="position: absolute; top: 12px; left: 12px; padding: 5px 10px; border-radius: 999px; background: rgba(5,7,15,.78); border: 1px solid rgba(255,168,0,.5); color: #FFA800; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px)">Dados fictícios</span>
+          </button>
+          <figcaption style="display: flex; justify-content: space-between; margin-top: 10px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: #8FA0C2"><span>RH – Vagas Trabalhadas</span><span style="color: var(--accent)">Ampliar +</span></figcaption>
+        </figure>
+      </div>
+      </sc-if>
+      <div>
+        <h3 style="margin: 0; font-size: clamp(24px, 2.4vw, 34px); font-weight: 600; letter-spacing: -.03em">{{active.title}}</h3>
+        <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.65; color: #B7C3DE">{{active.desc}}</p>
+        <sc-if value="{{isP1}}" hint-placeholder-val="{{ true }}">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; margin-top: 22px">
+          <sc-for list="{{modules}}" as="m" hint-placeholder-count="4">
+            <div class="card" style="padding: 16px 18px; border-radius: 16px; background: #05070F; border: 1px solid rgba(255,255,255,.06)">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="{{m.color}}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="{{m.d}}"/></svg>
+              <div style="margin-top: 10px; font-size: 15px; font-weight: 700">{{m.name}}</div>
+              <div style="margin-top: 4px; font-size: 13px; line-height: 1.5; color: #8FA0C2">{{m.text}}</div>
+            </div>
+          </sc-for>
+        </div>
+        </sc-if>
+        <sc-if value="{{isP1}}" hint-placeholder-val="{{ true }}">
+        <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px">
+          <sc-for list="{{activeTools}}" as="t" hint-placeholder-count="3">
+            <span style="padding: 7px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,.16); font-size: 12px; font-weight: 600; letter-spacing: .04em">{{t.name}}</span>
+          </sc-for>
+        </div>
+        <p style="display: flex; align-items: center; gap: 8px; margin: 18px 0 0; font-size: 12px; line-height: 1.5; color: #8FA0C2"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#FFA800" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4 M12 8h.01"/></svg>Dados fictícios: os valores deste projeto foram alterados para fins de demonstração.</p>
+        </sc-if>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESSO -->
+<section id="processo" style="padding: clamp(72px, 10vw, 140px) 0 0">
+  <div class="sr">
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #6F86B4">Processo</div>
+    <h2 style="margin: 12px 0 0; font-weight: 500; font-size: clamp(36px, 5.4vw, 80px); line-height: 1; letter-spacing: -.04em">Do dado bruto à <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: var(--accent)">decisão</span></h2>
+  </div>
+  <div class="sr" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 44px">
+    <sc-for list="{{steps}}" as="s" hint-placeholder-count="4">
+      <div class="card" style="padding: 28px; border-radius: 24px; background: linear-gradient(160deg, #131B33, #0D1326); border: 1px solid rgba(255,255,255,.08); min-height: 230px; display: flex; flex-direction: column; justify-content: space-between">
+        <div style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 44px; color: var(--accent2)">{{s.n}}</div>
+        <div><div style="font-size: 22px; font-weight: 600; letter-spacing: -.02em">{{s.title}}</div><div style="margin-top: 8px; font-size: 14px; line-height: 1.6; color: #9DB0D3">{{s.text}}</div></div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- STACK -->
+<section style="padding: clamp(72px, 10vw, 140px) 0 0">
+  <div class="sr" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px">
+    <div>
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #6F86B4">Stack</div>
+      <h2 style="margin: 12px 0 0; font-weight: 500; font-size: clamp(36px, 5.4vw, 80px); line-height: 1; letter-spacing: -.04em">Ferramentas do <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: var(--accent)">ofício</span></h2>
+    </div>
+    <p style="max-width: 360px; margin: 0; font-size: 15px; line-height: 1.6; color: #9DB0D3">O que domino e uso no dia a dia, e o que estou aprofundando.</p>
+  </div>
+
+  <div class="sr" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; margin-top: 44px">
+    <sc-for list="{{stackPro}}" as="t" hint-placeholder-count="4">
+      <div class="card" style="position: relative; overflow: hidden; padding: 28px; border-radius: 28px; background: linear-gradient(160deg, #131B33, #0D1326); border: 1px solid rgba(255,255,255,.1); min-height: 250px; display: flex; flex-direction: column; justify-content: space-between">
+        <div aria-hidden="true" style="position: absolute; right: -30%; top: -40%; width: 80%; height: 80%; border-radius: 50%; background: radial-gradient(closest-side, rgba(45,106,216,.35), transparent 75%); filter: blur(30px)"></div>
+        <div style="position: relative; display: flex; justify-content: space-between; align-items: center; gap: 8px">
+          <span style="font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent)">{{t.level}}</span>
+          <span style="font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--accent2)">{{t.badge}}</span>
+        </div>
+        <div style="position: relative">
+          <div style="font-size: clamp(30px, 3vw, 42px); font-weight: 600; letter-spacing: -.04em">{{t.name}}</div>
+          <div style="margin-top: 8px; font-size: 14px; line-height: 1.55; color: #9DB0D3">{{t.role}}</div>
+          <div aria-hidden="true" style="display: flex; gap: 5px; margin-top: 20px">
+            <sc-for list="{{t.segs}}" as="s" hint-placeholder-count="5">
+              <i class="seg" style="{{s.style}}"></i>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div class="sr" style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; margin-top: 28px; padding: 22px 28px; border-radius: 24px; background: #10162A; border: 1px solid rgba(255,255,255,.08)">
+    <div style="flex: 0 0 auto; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #6F86B4">Em evolução</div>
+    <sc-for list="{{stackBase}}" as="t" hint-placeholder-count="2">
+      <div style="flex: 1 1 240px; display: flex; align-items: center; gap: 16px">
+        <div style="font-size: 20px; font-weight: 700; letter-spacing: -.02em">{{t.name}}</div>
+        <div aria-hidden="true" style="display: flex; gap: 4px">
+          <sc-for list="{{t.segs}}" as="s" hint-placeholder-count="5">
+            <i class="seg" style="{{s.style}}"></i>
+          </sc-for>
+        </div>
+        <div style="font-size: 12px; color: #8FA0C2">{{t.level}}</div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<!-- TRAJETÓRIA -->
+<section style="padding: clamp(72px, 10vw, 140px) 0 0">
+  <div class="sr">
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #6F86B4">Trajetória</div>
+    <h2 style="margin: 12px 0 0; font-weight: 500; font-size: clamp(36px, 4.6vw, 68px); line-height: 1; letter-spacing: -.04em">Experiência e <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: var(--accent)">formação</span></h2>
+  </div>
+  <div class="sr" style="display: flex; flex-wrap: wrap; gap: 48px clamp(32px, 6vw, 96px); margin-top: 40px">
+    <div style="flex: 1.5 1 460px; min-width: 0">
+      <div style="padding-bottom: 14px; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #6F86B4">Experiência</div>
+      <div style="border-top: 1px solid rgba(255,255,255,.12)">
+        <sc-for list="{{career}}" as="c" hint-placeholder-count="2">
+          <div class="plist" style="padding: 28px 8px; border-bottom: 1px solid rgba(255,255,255,.12)">
+            <div style="font-size: 13px; letter-spacing: .08em; color: var(--accent2)">{{c.period}}</div>
+            <div style="margin-top: 8px; font-size: clamp(22px, 2vw, 30px); font-weight: 600; letter-spacing: -.02em">{{c.role}}</div>
+            <div style="margin-top: 6px; font-size: 14px; color: #9DB0D3">{{c.where}}</div>
+            <ul style="margin: 18px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px">
+              <sc-for list="{{c.points}}" as="pt" hint-placeholder-count="3">
+                <li style="position: relative; padding-left: 20px; font-size: 15px; line-height: 1.6; color: #B7C3DE"><i aria-hidden="true" style="position: absolute; left: 0; top: 10px; width: 8px; height: 2px; background: var(--accent)"></i>{{pt.t}}</li>
+              </sc-for>
+            </ul>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="flex: 1 1 380px; min-width: 0">
+      <div style="padding-bottom: 14px; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #6F86B4">Formação</div>
+      <div style="border-top: 1px solid rgba(255,255,255,.12)">
+        <sc-for list="{{education}}" as="c" hint-placeholder-count="2">
+          <div class="plist" style="padding: 26px 8px; border-bottom: 1px solid rgba(255,255,255,.12)">
+            <div style="font-size: 13px; letter-spacing: .08em; color: var(--accent2)">{{c.period}}</div>
+            <div style="margin-top: 8px; font-size: clamp(20px, 1.8vw, 26px); font-weight: 600; letter-spacing: -.02em">{{c.role}}</div>
+            <div style="margin-top: 6px; font-size: 14px; color: #9DB0D3">{{c.where}}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="margin-top: 44px; padding-bottom: 14px; font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #6F86B4">Certificações</div>
+      <div style="border-top: 1px solid rgba(255,255,255,.12)">
+        <sc-for list="{{certs}}" as="c" hint-placeholder-count="4">
+          <div class="plist" style="padding: 18px 8px; border-bottom: 1px solid rgba(255,255,255,.12)">
+            <div style="font-size: 17px; font-weight: 600; letter-spacing: -.01em">{{c.name}}</div>
+            <div style="margin-top: 4px; font-size: 13px; color: #9DB0D3">{{c.org}}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div class="sr" style="margin-top: 48px; padding: clamp(22px, 3vw, 36px); border-radius: 28px; background: #10162A; border: 1px solid rgba(255,255,255,.08)">
+    <div style="font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #6F86B4">Iniciativas em que atuei</div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; margin-top: 18px">
+      <sc-for list="{{initiatives}}" as="i" hint-placeholder-count="3">
+        <div class="card" style="padding: 18px 20px; border-radius: 18px; background: #05070F; border: 1px solid rgba(255,255,255,.06); font-size: 15px; line-height: 1.5; font-weight: 600"><span aria-hidden="true" style="color: var(--accent2)">→ </span>{{i.t}}</div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- PLAYBOOK -->
+<section id="playbook" style="padding: clamp(72px, 10vw, 140px) 0 0">
+  <div class="sr" style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px">
+    <div>
+      <div style="font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: #6F86B4">Playbook</div>
+      <h2 style="margin: 12px 0 0; font-weight: 500; font-size: clamp(36px, 4.6vw, 68px); line-height: 1; letter-spacing: -.04em">Boas práticas e <span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: var(--accent)">aprendizados</span></h2>
+    </div>
+    <p style="max-width: 380px; margin: 0; font-size: 15px; line-height: 1.6; color: #9DB0D3">Leituras de outros autores que valem a pena para quem trabalha com dados.</p>
+  </div>
+  <div class="sr" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 40px">
+    <sc-for list="{{posts}}" as="p" hint-placeholder-count="3">
+      <a href="{{p.url}}" target="_blank" rel="noopener noreferrer" class="card" style="display: flex; flex-direction: column; justify-content: space-between; gap: 28px; min-height: 240px; padding: 28px; border-radius: 24px; background: #10162A; border: 1px solid rgba(255,255,255,.08)">
+        <div style="font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent)">{{p.tag}}</div>
+        <div style="font-size: 22px; font-weight: 600; line-height: 1.25; letter-spacing: -.02em">{{p.title}}</div>
+        <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 13px; color: #8FA0C2"><span>{{p.source}}</span><span style="color: var(--accent2); white-space: nowrap">Ler ↗</span></div>
+      </a>
+    </sc-for>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" style="padding: clamp(72px, 10vw, 140px) 0 24px">
+  <div class="sr" style="position: relative; overflow: hidden; border-radius: 32px; background: #05070F; padding: clamp(32px, 6vw, 88px); text-align: center">
+    <div aria-hidden="true" class="blob1" style="position: absolute; left: 10%; bottom: -50%; width: 80%; height: 120%; border-radius: 50%; background: radial-gradient(closest-side, #2D6AD8, rgba(31,78,158,.5) 50%, transparent 78%); filter: blur(60px)"></div>
+    <svg aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: .3; mix-blend-mode: overlay; pointer-events: none"><rect width="100%" height="100%" filter="url(#grain)"/></svg>
+    <div style="position: relative">
+      <h2 style="margin: 0; font-weight: 500; font-size: clamp(40px, 7.4vw, 116px); line-height: .98; letter-spacing: -.045em">Vamos transformar seus<br><span style="font-family: 'Playfair Display', Georgia, serif; font-style: italic; color: var(--accent)">dados</span> em resultado?</h2>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 40px">
+        <a class="cta" href="https://www.linkedin.com/in/isaac-matos-38995a21b/" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 32px; border-radius: 999px; background: var(--accent); color: #0A0E1A; font-weight: 800; font-size: 15px">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a class="cta" href="https://github.com/ZhackMorr" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; min-height: 52px; padding: 0 32px; border-radius: 999px; border: 1px solid rgba(255,255,255,.3); font-weight: 700; font-size: 15px">GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </div>
+  <footer style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 28px 8px 8px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: #6F86B4">
+    <span>Isaac Moraes — Analista de BI</span>
+    <span>© 2026</span>
+  </footer>
+</section>
+
+</div>
+<sc-if value="{{zoomOn}}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-label="Imagem ampliada" onClick="{{closeZoom}}" style="position: fixed; inset: 0; z-index: 50; background: rgba(5,7,15,.94); display: flex; align-items: center; justify-content: center; padding: 56px 24px 24px; cursor: zoom-out">
+  <img src="{{zoomSrc}}" alt="{{zoomAlt}}" style="max-width: 100%; max-height: 100%; border-radius: 16px; box-shadow: 0 30px 90px rgba(0,0,0,.6)">
+  <button aria-label="Fechar imagem" onClick="{{closeZoom}}" style="position: absolute; top: 14px; right: 18px; width: 44px; height: 44px; border-radius: 50%; border: 1px solid rgba(255,255,255,.3); background: rgba(255,255,255,.08); color: #F4F6FB; font-size: 22px; cursor: pointer">×</button>
+</div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#FFA800","options":["#FFA800","#FF7A45","#F5D547","#FF5C8A"]},"accent2":{"editor":"color","default":"#00FFE0","options":["#00FFE0","#5BE7A9","#7CC4FF","#B69CFF"]},"$preview":{"width":1440,"height":3300}}'>
+class Component extends DCLogic {
+  state = { active: 0, zoom: null };
+  renderVals() {
+    const imgs = [
+      { src: '/_blob/172fd3d5f834a771ea02b672f6645431', alt: 'Dashboard RH – Headcount Efetivos, com headcount, admissões, demissões e turnover' },
+      { src: '/_blob/ce7cb8d9a3adce8d0726dcb3f154777f', alt: 'Dashboard RH – Treinamentos Onboarding, com a conclusão dos treinamentos por unidade' },
+      { src: '/_blob/41d1e1c81303856394eebde8d7a4d702', alt: 'Dashboard RH – Vagas Trabalhadas, com vagas criadas, fechadas, em aberto e SLA' }
+    ];
+    const seg = (on, color, total) => Array.from({ length: 5 }, (_, i) => ({
+      style: 'display:block;height:6px;border-radius:3px;animation-delay:' + (i * 0.08) + 's;width:' + (total > 5 ? '34px' : '22px') + ';background:' + (i < on ? color : 'rgba(255,255,255,.14)')
+    }));
+    const accent = this.props.accent ?? '#FFA800';
+    const accent2 = this.props.accent2 ?? '#00FFE0';
+    const data = [
+      { n: '01', title: 'Dashboard Executivo de Gente & Gestão', tag: 'People Analytics · Power BI', desc: 'Dashboard executivo desenvolvido para consolidar indicadores de Recursos Humanos, acompanhar a evolução da força de trabalho e permitir análises por período e estrutura organizacional. A solução reúne diferentes dimensões de People Analytics em uma visão integrada, voltada ao acompanhamento gerencial e à tomada de decisão.', tools: ['Power BI', 'DAX', 'Power Query'], bars: [42, 58, 50, 72, 64, 86, 78, 94],
+        modules: [
+          { name: 'Força de trabalho', text: 'Headcount e estrutura organizacional', color: accent2, d: 'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2 M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8z M22 21v-2a4 4 0 0 0-3-3.87 M16 3.13a4 4 0 0 1 0 7.75' },
+          { name: 'Movimentações', text: 'Admissões, desligamentos e turnover', color: accent, d: 'M22 7l-8.5 8.5-5-5L2 17 M16 7h6v6' },
+          { name: 'Mobilidade interna', text: 'Transferências e movimentações', color: accent2, d: 'M12 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z M5 16a3 3 0 1 0 0 6 3 3 0 0 0 0-6z M19 16a3 3 0 1 0 0 6 3 3 0 0 0 0-6z M12 8v4 M12 12H5v4 M12 12h7v4' },
+          { name: 'Perfil organizacional', text: 'Diversidade e demografia', color: accent, d: 'M21.21 15.89A10 10 0 1 1 8 2.83 M22 12A10 10 0 0 0 12 2v10z' }
+        ] },
+      { n: '02', soon: true, title: 'Projeto profissional', tag: 'Case do trabalho', desc: 'Um projeto desenvolvido no meu trabalho. Estou reunindo as informações para apresentá-lo aqui, com contexto, solução e resultados.', tools: [], bars: [] },
+      { n: '03', soon: true, title: 'Projeto pessoal', tag: 'Case pessoal', desc: 'Um projeto pessoal em construção. Em breve ele estará aqui, com o processo, as ferramentas e os resultados.', tools: [], bars: [] },
+      { n: '04', soon: true, title: 'Projeto pessoal', tag: 'Case pessoal', desc: 'Outro projeto pessoal em construção. Em breve ele estará aqui, com o processo, as ferramentas e os resultados.', tools: [], bars: [] }
+    ];
+    const a = this.state.active;
+    const items = data.map((p, i) => ({
+      n: p.n, title: p.title, tag: p.tag, soon: !!p.soon,
+      pick: () => this.setState({ active: i }),
+      style: 'display:flex;align-items:center;gap:18px;width:100%;padding:20px 22px;border-radius:20px;cursor:pointer;color:#F4F6FB;text-align:left;font-family:inherit;min-height:44px;border:1px solid ' + (i === a ? accent : 'rgba(255,255,255,.1)') + ';background:' + (i === a ? 'rgba(255,255,255,.07)' : 'transparent')
+    }));
+    const cur = data[a];
+    return {
+      accent, accent2,
+      projects: items,
+      active: cur,
+      isP1: a === 0,
+      notP1: a !== 0,
+      modules: cur.modules || [],
+      activeTools: cur.tools.map(t => ({ name: t })),
+      bars: cur.bars.map((h, i) => ({ style: 'flex:1;border-radius:6px 6px 2px 2px;height:' + h + '%;animation-delay:' + (i * 0.07) + 's;background:linear-gradient(180deg,' + (i % 3 === 2 ? accent : '#5B8DEF') + ',rgba(45,106,216,.25))' })),
+      steps: [
+        { n: '01', title: 'Entender', text: 'Levantamento das perguntas de negócio e das fontes de dados.' },
+        { n: '02', title: 'Modelar', text: 'Limpeza, Power Query e modelo estrela com medidas DAX.' },
+        { n: '03', title: 'Visualizar', text: 'Dashboards claros, responsivos e orientados a ação.' },
+        { n: '04', title: 'Decidir', text: 'Publicação, governança e acompanhamento do impacto.' }
+      ],
+      stackPro: [
+        { name: 'Power BI', role: 'Modelagem, dashboards e publicação de relatórios.', badge: 'Dia a dia', level: 'Avançado', segs: seg(4, accent, 5.5) },
+        { name: 'Power Query', role: 'Tratamento e transformação de dados, aplicados no trabalho.', badge: 'Uso no trabalho', level: 'Avançado', segs: seg(4, accent, 5.5) },
+        { name: 'DAX', role: 'Medidas, indicadores e inteligência de tempo.', badge: 'Dia a dia', level: 'Avançado', segs: seg(4, accent, 5.5) },
+        { name: 'Excel', role: 'Análise, validação e prototipagem de indicadores.', badge: 'Dia a dia', level: 'Avançado', segs: seg(4, accent, 5.5) }
+      ],
+      stackBase: [
+        { name: 'SQL', level: 'Intermediário', segs: seg(3, accent2, 3) },
+        { name: 'Python', level: 'Básico · acadêmico', segs: seg(2, accent2, 3) }
+      ],
+      zoomOn: this.state.zoom !== null,
+      zoomSrc: this.state.zoom === null ? '' : imgs[this.state.zoom].src,
+      zoomAlt: this.state.zoom === null ? '' : imgs[this.state.zoom].alt,
+      open0: () => this.setState({ zoom: 0 }),
+      open1: () => this.setState({ zoom: 1 }),
+      open2: () => this.setState({ zoom: 2 }),
+      closeZoom: () => this.setState({ zoom: null }),
+      career: [
+        { period: 'jun. 2025 — Atual', role: 'Analista de Inteligência de Dados Jr', where: 'Gi Group Holding · São Paulo · Híbrido', points: [
+          { t: 'Manutenção e evolução de dashboards em Power BI, com foco em indicadores estratégicos de RH e das Unidades de Negócio.' },
+          { t: 'Atuação em People Analytics e dados financeiros, apoiando a área de Remuneração com análises e insights.' },
+          { t: 'Modelos de dados e medidas DAX, além de Power Query e Excel avançado para automação, ETL e integração de fontes.' }
+        ] },
+        { period: 'jun. 2023 — jun. 2025', role: 'Estagiário em Análise de Dados', where: 'Gi Group Holding · São Paulo · Híbrido', points: [
+          { t: 'Coleta e organização de dados da área de T&D: feedbacks, avaliações e desempenho pré e pós-treinamento.' },
+          { t: 'Criação de relatórios e dashboards com as métricas-chave dos programas de treinamento.' },
+          { t: 'Análises exploratórias para identificar padrões, tendências e oportunidades de melhoria.' }
+        ] }
+      ],
+      education: [
+        { period: 'fev. 2026 — fev. 2028', role: 'Pós-graduação em Ciência de Dados e Big Data', where: 'PUC Minas · Em andamento' },
+        { period: 'fev. 2023 — jun. 2025', role: 'Tecnólogo em Análise e Desenvolvimento de Sistemas', where: 'Uninter · Concluído' }
+      ],
+      certs: [
+        { name: 'Análise e Visualização de Dados', org: 'Udemy · ago. 2023' },
+        { name: 'Banco de Dados', org: 'Centro Paula Souza · jul. 2020' },
+        { name: 'Versionamento Git', org: 'DIO · mai. 2024' },
+        { name: 'Algoritmos e Lógica de Programação', org: 'Udemy · ago. 2022' }
+      ],
+      initiatives: [
+        { t: 'Implementação de um sistema de gestão de desempenho (SGP)' },
+        { t: 'Relatórios de People Analytics com informações cruzadas' },
+        { t: 'Padronização de processos com BPM no fluxo de dados do RH' }
+      ],
+      posts: [
+        { tag: 'Power BI · Modelagem', title: 'Power Query: criando um Star Schema (esquema estrela) no Power BI', source: 'Artigo · LinkedIn', url: 'https://pt.linkedin.com/pulse/power-query-criando-um-star-schema-esquema-estrela-bi-soares-araujo' },
+        { tag: 'People Analytics', title: 'People Analytics: os indicadores mais valiosos em RH!', source: 'João von Zuben · LinkedIn', url: 'https://www.linkedin.com/pulse/people-analytics-os-indicadores-mais-valiosos-em-rh-jo%C3%A3o-von-zuben' },
+        { tag: 'Indicadores de RH', title: 'Indicadores de RH: entenda e aprenda a calcular o turnover', source: 'Laennder Silva Alves · LinkedIn', url: 'https://www.linkedin.com/pulse/indicadores-de-rh-entenda-e-aprenda-calcular-o-laennder-silva-alves' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
