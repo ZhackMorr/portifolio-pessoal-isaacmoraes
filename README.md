@@ -3,7 +3,7 @@
 > Portfólio profissional de **Analista de BI e Análise de Dados**, com foco em **People Analytics**, dashboards em **Power BI** e soluções analíticas orientadas à decisão.
 
 ![Status](https://img.shields.io/badge/status-site%20final-FFA800?style=flat-square)
-![Versão](https://img.shields.io/badge/vers%C3%A3o-1.0.0-00FFE0?style=flat-square&labelColor=0A0E1A)
+![Versão](https://img.shields.io/badge/vers%C3%A3o-1.1.0-00FFE0?style=flat-square&labelColor=0A0E1A)
 ![Idioma](https://img.shields.io/badge/idioma-pt--BR-2D6AD8?style=flat-square)
 
 ---
@@ -67,8 +67,9 @@ O projeto seguiu um fluxo **design primeiro**: o visual foi prototipado e valida
 | 4 | **Processo** | Entender → Modelar → Visualizar → Decidir |
 | 5 | **Stack** | Power BI, Power Query, DAX e Excel (avançado); SQL (intermediário); Python (básico) |
 | 6 | **Trajetória** | Experiência, formação, certificações e iniciativas em que atuei |
-| 7 | **Playbook** | Leituras selecionadas sobre BI e People Analytics |
-| 8 | **Contato** | LinkedIn e GitHub |
+| 7 | **Recomendações** | Depoimentos de colegas, vindos do LinkedIn |
+| 8 | **Playbook** | Leituras selecionadas sobre BI e People Analytics |
+| 9 | **Contato** | LinkedIn e GitHub |
 
 Detalhes de cada seção em [`docs/ESTRUTURA-E-CONTEUDO.md`](docs/ESTRUTURA-E-CONTEUDO.md).
 

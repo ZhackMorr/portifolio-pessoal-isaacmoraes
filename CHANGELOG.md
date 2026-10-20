@@ -3,6 +3,17 @@
 Todas as mudanças relevantes deste projeto são registradas aqui.
 O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [1.1.0] — 2026-10-20
+
+### Adicionado
+
+- Seção **Recomendações**, com dois depoimentos do LinkedIn (Juliana Bertoni e Robson Lima) e link para o perfil.
+- Link "Recomendações" no menu.
+
+### Observação
+
+- Os textos dos depoimentos estão parciais (como exibidos no perfil) e podem ser substituídos pelos completos.
+
 ## [1.0.0] — 2026-10-20
 
 Versão final do site completo.

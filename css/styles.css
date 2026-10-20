@@ -905,3 +905,18 @@ button { font: inherit; color: inherit; cursor: pointer; }
   .js .reveal { opacity: 1; transform: none; }
   .js .meter i { transform: none; }
 }
+
+/* ---------- Recomendações ---------- */
+.recs { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.recs > li { display: flex; }
+.rec { position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: 28px; width: 100%; margin: 0; padding: 76px 32px 28px; }
+.rec-mark { position: absolute; top: 14px; left: 28px; font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-size: 96px; line-height: 1; color: var(--accent); opacity: .5; pointer-events: none; }
+.rec blockquote { margin: 0; display: grid; gap: 14px; font-size: 16px; line-height: 1.65; color: #D5DDF0; }
+.rec blockquote p { margin: 0; }
+.rec figcaption { display: flex; align-items: center; gap: 14px; padding-top: 22px; border-top: 1px solid var(--line); }
+.rec-avatar { flex: none; display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: linear-gradient(135deg, #2D6AD8, #5B8DEF); font-size: 14px; font-weight: 800; letter-spacing: .04em; color: #fff; }
+.rec-who { display: grid; gap: 2px; font-size: 13px; line-height: 1.4; color: #9DB0D3; }
+.rec-who strong { font-size: 15px; color: #F4F6FB; }
+.rec-date { color: var(--accent-2); font-size: 12px; letter-spacing: .04em; }
+.recs-foot { margin: 28px 0 0; display: flex; justify-content: center; }
+@media (max-width: 520px) { .rec { padding: 68px 22px 24px; } .recs { grid-template-columns: 1fr; } }
