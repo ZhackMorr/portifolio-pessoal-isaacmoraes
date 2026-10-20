@@ -2,8 +2,8 @@
 
 > Portfólio profissional de **Analista de BI e Análise de Dados**, com foco em **People Analytics**, dashboards em **Power BI** e soluções analíticas orientadas à decisão.
 
-![Status](https://img.shields.io/badge/status-protótipo%20visual-FFA800?style=flat-square)
-![Versão](https://img.shields.io/badge/vers%C3%A3o-0.1.0-00FFE0?style=flat-square&labelColor=0A0E1A)
+![Status](https://img.shields.io/badge/status-site%20final-FFA800?style=flat-square)
+![Versão](https://img.shields.io/badge/vers%C3%A3o-1.0.0-00FFE0?style=flat-square&labelColor=0A0E1A)
 ![Idioma](https://img.shields.io/badge/idioma-pt--BR-2D6AD8?style=flat-square)
 
 ---
@@ -18,7 +18,8 @@
 - [Responsividade](#responsividade)
 - [Projetos em destaque](#projetos-em-destaque)
 - [Estrutura do repositório](#estrutura-do-repositório)
-- [Como visualizar o protótipo](#como-visualizar-o-protótipo)
+- [Como executar localmente](#como-executar-localmente)
+- [Publicação no GitHub Pages](#publicação-no-github-pages)
 - [Aviso sobre dados fictícios](#aviso-sobre-dados-fictícios)
 - [Roadmap](#roadmap)
 - [Documentação](#documentação)
@@ -40,7 +41,7 @@ O objetivo do site é apresentar, de forma clara e visualmente marcante:
 - leituras e boas práticas que acompanham meu dia a dia;
 - canais de contato.
 
-O projeto segue um fluxo **design primeiro**: o visual foi prototipado, validado e ajustado antes da implementação definitiva.
+O projeto seguiu um fluxo **design primeiro**: o visual foi prototipado e validado antes da implementação. O site final é **estático** (HTML, CSS e JavaScript puros, sem build nem dependências), leve e pronto para o GitHub Pages.
 
 ## Status atual
 
@@ -48,13 +49,13 @@ O projeto segue um fluxo **design primeiro**: o visual foi prototipado, validado
 | --- | --- |
 | Análise da referência visual | Concluída |
 | Estrutura das seções e direção visual | Concluída |
-| Protótipo visual interativo (desktop e mobile) | **Concluído, em refinamento contínuo** |
+| Protótipo visual interativo (desktop e mobile) | Concluído (`design/`) |
 | Conteúdo do projeto 01 (People Analytics) | Concluído |
 | Conteúdo dos projetos 02, 03 e 04 | Em breve |
-| Implementação definitiva do site | Próxima etapa |
-| Publicação (deploy) | Pendente |
+| **Implementação do site completo** | **Concluída (v1.0.0)** |
+| Publicação (GitHub Pages) | Pronta para ativar |
 
-> Este repositório contém, por enquanto, o **protótipo e a documentação de design**. O código final do site será adicionado quando o visual for aprovado.
+> A versão final do site está na raiz do repositório (`index.html`, `css/`, `js/`, `assets/img/`). A pasta `design/` guarda apenas o protótipo.
 
 ## Estrutura das seções
 
@@ -156,36 +157,53 @@ Projetos pessoais em construção.
 
 ```text
 portifolio-pessoal-isaacmoraes/
-├── README.md                  # Este arquivo
-├── CHANGELOG.md               # Histórico de versões
-├── .gitignore
+├── index.html                 # Site completo (página única)
+├── favicon.svg
+├── css/
+│   └── styles.css             # Tokens, componentes, animações e responsividade
+├── js/
+│   └── main.js                # Menu, rolagem suave, reveal, abas, lightbox
 ├── assets/
-│   └── projeto-01-people-analytics/
-│       ├── headcount-efetivos.png
-│       ├── treinamentos-onboarding.png
-│       └── vagas-trabalhadas.png
+│   ├── img/                   # Imagens otimizadas (WebP) usadas no site
+│   └── projeto-01-people-analytics/  # Originais (PNG) do projeto 01
 ├── design/                    # Protótipo visual (fontes do canvas)
-│   ├── canvas.json            # Índice das pranchas e suas dimensões
-│   ├── Main.dc.html           # Desktop — página inicial
-│   ├── Mobile.dc.html         # Mobile — página inicial
-│   └── Direcao.dc.html        # Prancha de direção visual
-└── docs/
-    ├── DIRECAO-VISUAL.md      # Paleta, tipografia, efeitos e espaçamentos
-    ├── ESTRUTURA-E-CONTEUDO.md# Seções, conteúdo e estado de cada uma
-    ├── DESIGN-PROTOTIPO.md    # Como o protótipo está organizado
-    └── ROADMAP.md             # Próximos passos e conteúdo pendente
+├── docs/
+│   ├── DIRECAO-VISUAL.md
+│   ├── ESTRUTURA-E-CONTEUDO.md
+│   ├── DESIGN-PROTOTIPO.md
+│   └── ROADMAP.md
+├── README.md
+├── CHANGELOG.md
+└── .gitignore
 ```
 
-## Como visualizar o protótipo
+## Como executar localmente
 
-Os arquivos em `design/` são as **fontes de um canvas do Claude Design** (formato `.dc.html`). Eles descrevem as pranchas, mas **não abrem diretamente no navegador**, porque dependem do ambiente do canvas (por exemplo, o arquivo `support.js` e o endereço `/_blob/...` das imagens).
+Não há dependências nem etapa de build. Basta servir a pasta com qualquer servidor estático:
 
-Para visualizar:
+```bash
+git clone https://github.com/ZhackMorr/portifolio-pessoal-isaacmoraes.git
+cd portifolio-pessoal-isaacmoraes
+python3 -m http.server 8000
+# abra http://localhost:8000
+```
 
-1. Abra o protótipo publicado no Claude Design (link privado do autor); ou
-2. Consulte as imagens do projeto 01 em `assets/` e a documentação em `docs/` para entender o resultado visual.
+Também é possível abrir `index.html` direto no navegador. As fontes (Manrope e Playfair Display) são carregadas do Google Fonts; sem internet, o site usa fontes do sistema.
 
-As imagens usadas no protótipo estão em `assets/`. A correspondência entre os arquivos e os endereços do canvas está em [`docs/DESIGN-PROTOTIPO.md`](docs/DESIGN-PROTOTIPO.md).
+## Publicação no GitHub Pages
+
+1. No repositório, abra **Settings › Pages**.
+2. Em **Build and deployment**, escolha **Deploy from a branch**.
+3. Selecione a branch `main` e a pasta `/ (root)` e salve.
+4. Após alguns minutos, o site fica em `https://zhackmorr.github.io/portifolio-pessoal-isaacmoraes/`.
+
+## Detalhes técnicos
+
+- **Rolagem suave** própria (easing cúbico, cancelada por roda, toque ou teclado) com compensação do cabeçalho fixo;
+- **Acessibilidade:** link "pular para o conteúdo", foco visível, abas com navegação por setas, lightbox em `<dialog>` com retorno de foco e `Esc`;
+- **SEO:** metadados, Open Graph e JSON-LD (`Person`);
+- **Desempenho:** imagens em WebP com `width`/`height` e `loading="lazy"`;
+- **Movimento:** `prefers-reduced-motion` desativa as animações.
 
 ## Aviso sobre dados fictícios
 
@@ -197,15 +215,10 @@ Os dashboards exibidos neste portfólio tiveram **todos os indicadores alterados
 - [x] Proposta de seções e direção visual
 - [x] Protótipo interativo desktop e mobile
 - [x] Projeto 01 com imagens e documentação
-- [ ] Revisão final do protótipo
+- [x] Implementação do site completo
 - [ ] Projetos 02, 03 e 04
-- [ ] Implementação definitiva (HTML, CSS e JavaScript)
-- [ ] Animações finais com rolagem suave personalizada
-- [ ] Otimização de imagens e desempenho
-- [ ] Acessibilidade e SEO
-- [ ] Deploy (GitHub Pages ou similar)
-
-Lista completa em [`docs/ROADMAP.md`](docs/ROADMAP.md).
+- [ ] Ativar o GitHub Pages
+- [ ] Definir a licença
 
 ## Documentação
 

@@ -13,10 +13,6 @@
 - [x] Contato com LinkedIn e GitHub
 - [x] Rolagem suave no menu
 
-## Em andamento
-
-- [ ] Ajustes finos do protótipo, conforme feedback
-
 ## Conteúdo pendente
 
 - [ ] Projeto 02: case profissional
@@ -26,26 +22,27 @@
 - [ ] Incluir certificações novas, como a PL-300 (Power BI Data Analyst), quando houver
 - [ ] Incluir links dos projetos pessoais no GitHub
 
-## Implementação
+## Implementação (v1.0.0)
 
-- [ ] Definir a stack (sugestão: HTML, CSS e JavaScript sem framework, pela simplicidade e pelo bom desempenho)
-- [ ] Converter as pranchas em páginas responsivas
-- [ ] Extrair os tokens de cor e tipografia para variáveis CSS
-- [ ] Rolagem suave personalizada, com easing próprio
-- [ ] Menu mobile funcional
-- [ ] Otimizar imagens (WebP/AVIF e tamanhos responsivos)
-- [ ] Carregamento preguiçoso (lazy loading) das imagens
-- [ ] Fallbacks para navegadores sem `animation-timeline`
+- [x] Stack: HTML, CSS e JavaScript sem framework
+- [x] Pranchas convertidas em página responsiva
+- [x] Tokens de cor e tipografia em variáveis CSS
+- [x] Rolagem suave personalizada, com easing próprio
+- [x] Menu mobile funcional
+- [x] Imagens em WebP e carregamento preguiçoso
+- [x] Respeito a `prefers-reduced-motion`
+- [ ] Imagem Open Graph (`og:image`) para pré-visualização em redes sociais
 
 ## Qualidade
 
-- [ ] Auditoria de acessibilidade (contraste, foco, leitores de tela)
-- [ ] Testes em navegadores e dispositivos diferentes
-- [ ] Desempenho (Lighthouse)
-- [ ] SEO: título, descrição, Open Graph e favicon
+- [x] Foco visível, link de pular conteúdo e navegação por teclado
+- [x] SEO: título, descrição, Open Graph, JSON-LD e favicon
+- [ ] Auditoria de contraste e leitores de tela
+- [ ] Testes em mais navegadores e dispositivos
+- [ ] Lighthouse
 
 ## Publicação
 
-- [ ] Deploy (GitHub Pages ou similar)
+- [ ] Ativar o GitHub Pages (Settings › Pages › branch `main`, pasta raiz)
 - [ ] Domínio próprio (opcional)
 - [ ] Definir a licença do repositório

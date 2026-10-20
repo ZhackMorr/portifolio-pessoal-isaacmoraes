@@ -3,6 +3,25 @@
 Todas as mudanças relevantes deste projeto são registradas aqui.
 O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [1.0.0] — 2026-10-20
+
+Versão final do site completo.
+
+### Adicionado
+
+- Site estático em `index.html`, `css/styles.css` e `js/main.js`, sem dependências.
+- Menu fixo com versão mobile em tela cheia e destaque da seção atual.
+- Rolagem suave própria, com easing e compensação do cabeçalho.
+- Animações de revelação ao rolar, mesh gradient em deriva e brilho nos cartões.
+- Abas de projetos com navegação por teclado e lightbox das imagens.
+- Imagens do projeto 01 otimizadas em WebP (`assets/img/`).
+- Favicon, metadados SEO, Open Graph e JSON-LD.
+- Respeito a `prefers-reduced-motion`.
+
+### Alterado
+
+- README, roadmap e documentação atualizados para o site final.
+
 ## [0.1.0] — 2026-10-20
 
 Primeira versão do repositório, com o protótipo visual e a documentação.
