@@ -3,6 +3,19 @@
 Todas as mudanças relevantes deste projeto são registradas aqui.
 O formato segue o [Keep a Changelog](https://keepachangelog.com/pt-BR/1.1.0/).
 
+## [1.2.0] — 2026-10-26
+
+### Adicionado
+
+- Projeto 02 publicado, dividido em dois materiais: **Dossiê de Cultura** (Censo de Diversidade, Pesquisa de Desligamento e Onboarding 30/60/90 dias) e **Relatório de Turnover**.
+- 4 imagens novas em `assets/img/`, todas com aviso de dados fictícios.
+- Estilos para projetos com vários materiais (`.material`, `.material-split`).
+
+### Alterado
+
+- O lightbox agora navega apenas pelas imagens do projeto aberto.
+- A aba do projeto 02 deixou de exibir "Em breve".
+
 ## [1.1.0] — 2026-10-20
 
 ### Adicionado

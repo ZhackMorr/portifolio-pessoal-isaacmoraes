@@ -211,7 +211,7 @@
   var lightbox = $('#lightbox');
   var lbImg = $('#lightbox-img');
   var lbCap = $('#lightbox-cap');
-  var shots = $$('[data-lightbox]');
+  var shots = [];
   var lbIndex = 0;
   var lastTrigger = null;
 
@@ -225,18 +225,21 @@
     lbCap.textContent = (cap ? cap.textContent : '') + ' · Dados fictícios · ' + (lbIndex + 1) + '/' + shots.length;
   }
 
+  function groupOf(btn) { return $$('[data-lightbox]', btn.closest('.project-panel') || doc); }
+
   function openLightbox(i, trigger) {
     if (!lightbox || typeof lightbox.showModal !== 'function') {
-      window.open(shots[i].querySelector('img').src, '_blank', 'noopener');
+      window.open(trigger.querySelector('img').src, '_blank', 'noopener');
       return;
     }
     lastTrigger = trigger;
-    showShot(i);
+    shots = groupOf(trigger);
+    showShot(shots.indexOf(trigger));
     lightbox.showModal();
   }
 
-  shots.forEach(function (btn, i) {
-    btn.addEventListener('click', function () { openLightbox(i, btn); });
+  $$('[data-lightbox]').forEach(function (btn) {
+    btn.addEventListener('click', function () { openLightbox(0, btn); });
   });
 
   if (lightbox) {

@@ -3,7 +3,7 @@
 > Portfólio profissional de **Analista de BI e Análise de Dados**, com foco em **People Analytics**, dashboards em **Power BI** e soluções analíticas orientadas à decisão.
 
 ![Status](https://img.shields.io/badge/status-site%20final-FFA800?style=flat-square)
-![Versão](https://img.shields.io/badge/vers%C3%A3o-1.1.0-00FFE0?style=flat-square&labelColor=0A0E1A)
+![Versão](https://img.shields.io/badge/vers%C3%A3o-1.2.0-00FFE0?style=flat-square&labelColor=0A0E1A)
 ![Idioma](https://img.shields.io/badge/idioma-pt--BR-2D6AD8?style=flat-square)
 
 ---
@@ -51,7 +51,8 @@ O projeto seguiu um fluxo **design primeiro**: o visual foi prototipado e valida
 | Estrutura das seções e direção visual | Concluída |
 | Protótipo visual interativo (desktop e mobile) | Concluído (`design/`) |
 | Conteúdo do projeto 01 (People Analytics) | Concluído |
-| Conteúdo dos projetos 02, 03 e 04 | Em breve |
+| Conteúdo do projeto 02 (Dossiê de Cultura e Relatório de Turnover) | Concluído |
+| Conteúdo dos projetos 03 e 04 | Em breve |
 | **Implementação do site completo** | **Concluída (v1.0.0)** |
 | Publicação (GitHub Pages) | Pronta para ativar |
 
@@ -146,9 +147,14 @@ Dashboard executivo desenvolvido para consolidar indicadores de Recursos Humanos
 
 > Todos os valores exibidos foram alterados e **não representam números reais**.
 
-### 02 · Projeto profissional — *Em breve*
+### 02 · Dossiê de Cultura & Relatório de Turnover
 
-Case desenvolvido no ambiente de trabalho, em preparação.
+Projeto desenvolvido no ambiente de trabalho, reunido em dois materiais:
+
+- **Dossiê de Cultura:** reúne as principais percepções e avaliações dos processos de onboarding, diversidade e comunicação da empresa (Censo de Diversidade 2025, Pesquisa de Desligamento 2025 e comparativo de onboarding 30/60/90 dias).
+- **Relatório de Turnover:** entendimento do turnover por departamento, localidade e diretoria, com tipo de desligamento, tempo de casa e evolução mensal.
+
+> Todos os indicadores foram alterados e **não representam números reais**.
 
 ### 03 e 04 · Projetos pessoais — *Em breve*
 
@@ -217,7 +223,8 @@ Os dashboards exibidos neste portfólio tiveram **todos os indicadores alterados
 - [x] Protótipo interativo desktop e mobile
 - [x] Projeto 01 com imagens e documentação
 - [x] Implementação do site completo
-- [ ] Projetos 02, 03 e 04
+- [x] Projeto 02
+- [ ] Projetos 03 e 04
 - [ ] Ativar o GitHub Pages
 - [ ] Definir a licença
 

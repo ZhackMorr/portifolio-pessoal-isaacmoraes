@@ -15,7 +15,7 @@
 
 ## Conteúdo pendente
 
-- [ ] Projeto 02: case profissional
+- [x] Projeto 02: Dossiê de Cultura e Relatório de Turnover
 - [ ] Projeto 03: projeto pessoal
 - [ ] Projeto 04: projeto pessoal
 - [ ] Revisar os artigos do Playbook (confirmar que os links continuam no ar)
